@@ -72,6 +72,9 @@
     padding: 0 1rem;
     height: 100%;
   }
+
+  
+  
   
   .navbar__btn {
     display: flex;
@@ -301,8 +304,8 @@
   }
   
   #main__img {
-    height: 80%;
-    width: 80%;
+    height: 60%;
+    width: 60%;
   }
   
   /* Mobile Responsive */
@@ -358,8 +361,8 @@
     }
   }
   
-  /* Services Section */
-  .services {
+  /* events Section */
+  .events {
     background: #131313;
     display: flex;
     flex-direction: column;
@@ -368,7 +371,7 @@
     height: 100vh;
   }
   
-  .services h1 {
+  .events h1 {
     background-color: #ff8177;
     background-image: linear-gradient(
       to right,
@@ -388,13 +391,13 @@
     font-size: 2.5rem;
   }
   
-  .services__container {
+  .events__container {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
   }
   
-  .services__card {
+  .events__card {
     margin: 1rem;
     height: 525px;
     width: 400px;
@@ -410,11 +413,11 @@
     color: #fff;
   }
   
-  .services__card:before {
+  .events__card:before {
     opacity: 0.2;
   }
   
-  .services__card:nth-child(2) {
+  .events__card:nth-child(2) {
     background-image: linear-gradient(
         to bottom,
         rgba(0, 0, 0, 0) 0%,
@@ -423,19 +426,19 @@
       url('/images/pic4.jpg');
   }
   
-  .services__card h2 {
+  .events__card h2 {
     position: absolute;
     top: 350px;
     left: 30px;
   }
   
-  .services__card p {
+  .events__card p {
     position: absolute;
     top: 400px;
     left: 30px;
   }
   
-  .services__card button {
+  .events__card button {
     color: #fff;
     padding: 10px 20px;
     border: none;
@@ -448,37 +451,37 @@
     font-size: 1rem;
   }
   
-  .services__card button:hover {
+  .events__card button:hover {
     cursor: pointer;
   }
   
-  .services__card:hover {
+  .events__card:hover {
     transform: scale(1.075);
     transition: 0.2s ease-in;
     cursor: pointer;
   }
   
   @media screen and (max-width: 960px) {
-    .services {
+    .events {
       height: 1600px;
     }
   
-    .services h1 {
+    .events h1 {
       font-size: 2rem;
       margin-top: 12rem;
     }
   }
   
   @media screen and (max-width: 480px) {
-    .services {
+    .events {
       height: 1400px;
     }
   
-    .services h1 {
+    .events h1 {
       font-size: 1.2rem;
     }
   
-    .services__card {
+    .events__card {
       width: 300px;
     }
   }
