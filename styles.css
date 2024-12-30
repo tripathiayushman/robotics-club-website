@@ -1,0 +1,207 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #000; /* Black background for the site */
+    color: #fff; /* Default text color */
+    display: flex;
+    justify-content: space-between; /* Space between text and image */
+    align-items: flex-start; /* Align items to the top of the page */
+    height: 100vh; /* Full viewport height */
+    padding: 0 20px;
+    padding-top: 60px; /* Added padding to account for the fixed navbar */
+}
+
+.text-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center; /* Center align the text */
+    max-width: 50%; /* Ensure text takes up half of the page width */
+}
+
+.text-container h1, .text-container h2, .text-container h3 {
+    margin: 0;
+    padding: 5px 0;
+    transition: all 0.3s ease;
+}
+
+.text-container h1 {
+    font-size: 48px;
+    font-weight: bold;
+    background: linear-gradient(to top, #ff0000, #ffff00); /* Red to Yellow gradient from bottom to top */
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+.text-container h2 {
+    font-size: 36px;
+    font-weight: bold;
+    background: linear-gradient(to top, #ff0000, #ffff00); /* Red to Yellow gradient from bottom to top */
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+.text-container h3 {
+    font-size: 24px;
+    font-weight: bold;
+    background: linear-gradient(to top, #ff0000, #ffff00); /* Red to Yellow gradient from bottom to top */
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+.text-container h1:hover, .text-container h2:hover, .text-container h3:hover {
+    transform: scale(1.1); /* Grow effect */
+    text-shadow: 0 0 15px rgba(255, 255, 0, 0.8), 0 0 25px rgba(255, 255, 0, 0.6); /* Yellow glow effect */
+}
+
+/* Image Styling */
+.image-container {
+    width: 40%; /* Adjust width of the image */
+    display: flex;
+    justify-content: flex-end; /* Align image to the right */
+}
+
+.image-container img {
+    width: 100%; /* Ensure the image takes full available width */
+    height: auto; /* Maintain image aspect ratio */
+    transition: transform 0.4s ease, box-shadow 0.4s ease; /* Smooth scaling and glow */
+}
+
+.image-container img:hover {
+    transform: scale(1.1); /* Grow effect */
+    box-shadow: 0 0 15px rgba(255, 0, 0, 0.5), 0 0 25px rgba(255, 0, 0, 0.4), 0 0 35px rgba(255, 0, 0, 0.3); /* Red glow */
+    border-radius: 10%; /* Optional rounded edges */
+}
+
+/* Navbar Styles */
+.navbar {
+    position: fixed; /* Make the navbar fixed at the top */
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #000; /* Black Navbar */
+    padding: 0.5rem 1rem;
+    z-index: 10; /* Ensure navbar is above text */
+    width: 100%; /* Make the navbar span the full width */
+}
+
+.navbar .logo {
+    display: flex;
+    align-items: center;
+}
+
+.brighten img {
+    -webkit-filter: brightness(50%);
+    -webkit-transition: all 1s ease;
+    -moz-transition: all 1s ease;
+    -o-transition: all 1s ease;
+    -ms-transition: all 1s ease;
+    transition: all 1s ease;
+}
+
+.brighten img:hover {
+    -webkit-filter: brightness(100%);
+}
+
+.navbar .logo img {
+    height: 40px;
+    margin-right: 1rem;
+    transition: transform 0.4s ease, box-shadow 0.4s ease; /* Smooth scaling and glow */
+}
+
+.navbar .logo img:hover {
+    transform: scale(1.5); /* Grow effect */
+    box-shadow: 0 0 10px 5px rgba(255, 0, 0, 0.5), /* Red glow */
+                0 0 15px 10px rgba(255, 0, 0, 0.4), 
+                0 0 20px 15px rgba(255, 0, 0, 0.3); /* Reduced red glow */
+    border-radius: 10%; /* Optional rounded edges */
+}
+
+.navbar a {
+    color: #ffffff;
+    font-size: 20px;
+    text-decoration: none;
+    padding: 10px 20px;
+    margin: 0 5px;
+    display: inline-block;
+    transition: all 0.4s, color 0.3s ease-in-out;
+    position: relative;
+    border: 2px solid transparent;
+    border-radius: 5px; /* Rounded edges for all buttons */
+}
+
+.navbar a:hover {
+    animation: color-wheel80 5s linear infinite; /* Rainbow animation */
+    border: 2px solid #fff; /* Border effect */
+    box-shadow: 0 0 10px 5px rgba(255, 255, 255, 0.2); /* Glow effect */
+    background-color: rgba(255, 255, 255, 0.1); /* Subtle background */
+}
+
+/* Red fill for Blog button with rounded edges */
+.navbar a#blog {
+    background-color: #ff0000; /* Red fill */
+    color: #ffffff; /* White text */
+    border-radius: 10px; /* Neater rounded edges */
+}
+
+.navbar a#blog:hover {
+    background-color: rgba(255, 255, 255, 0.1); /* Subtle background on hover */
+}
+
+/* Hamburger menu styles */
+.hamburger {
+    display: none;
+    font-size: 30px;
+    cursor: pointer;
+    color: #fff;
+}
+
+.navbar .nav-links {
+    display: flex;
+    flex-direction: row; /* Row for larger screens */
+}
+
+.nav-links.active {
+    display: flex; /* Show links on active state */
+}
+
+@keyframes color-wheel80 {
+    0% { color: #ffffff; }
+    14% { color: #ff0000; }
+    28% { color: #ff7f00; }
+    42% { color: #ffff00; }
+    57% { color: #00ff00; }
+    71% { color: #0000ff; }
+    85% { color: #4b0082; }
+    100% { color: #8b00ff; }
+}
+
+.navbar .nav-links {
+    display: flex;
+}
+
+@media (max-width: 600px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .navbar .nav-links {
+        display: none; /* Hide links by default on mobile */
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .navbar a {
+        width: 100%;
+        text-align: left;
+    }
+
+    .hamburger {
+        display: block; /* Show hamburger on mobile */
+    }
+}
